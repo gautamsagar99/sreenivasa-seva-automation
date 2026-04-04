@@ -17,6 +17,7 @@ hooks = [
 
 IMAGE_DURATION = 3
 TEXT_DURATION = 2
+TRANSITION_DURATION = 0.5
 
 def create_animated_video():
     if not os.path.exists(IMAGE_FOLDER):
@@ -70,6 +71,14 @@ def create_animated_video():
         # Apply zoom effect using vfx
         clip = clip.with_effects([vfx.Resize(lambda t: 1 + 0.05 * (t / IMAGE_DURATION))])
 
+        # Add fade out to all clips except the last one
+        if idx < len(images) - 1:
+            clip = clip.with_effects([vfx.FadeOut(TRANSITION_DURATION)])
+
+        # Add fade in to all clips except the first one
+        if idx > 0:
+            clip = clip.with_effects([vfx.FadeIn(TRANSITION_DURATION)])
+
         if idx == 0:
             text = random.choice(hooks)
 
@@ -86,7 +95,24 @@ def create_animated_video():
 
         clips.append(clip)
 
-    video = concatenate_videoclips(clips, method="compose")
+    # Create composite with overlapping clips for smooth transitions
+    final_clips = []
+    cumulative_time = 0
+
+    for idx, clip in enumerate(clips):
+        if idx == 0:
+            # First clip starts at 0
+            final_clips.append(clip)
+            cumulative_time += clip.duration
+        else:
+            # Subsequent clips overlap with previous by TRANSITION_DURATION
+            start_time = cumulative_time - TRANSITION_DURATION
+            clip_with_start = clip.with_start(start_time)
+            final_clips.append(clip_with_start)
+            cumulative_time += clip.duration - TRANSITION_DURATION
+
+    # Composite all clips together to create smooth transitions
+    video = CompositeVideoClip(final_clips, size=(1080, 1920))
     return video
 
 def add_audio(video):
