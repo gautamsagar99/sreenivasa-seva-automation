@@ -1,6 +1,1 @@
-moviepy 
-imageio 
-imageio-ffmpeg 
-numpy 
-pillow
-opencv-python
+Pillow>=9.0.0

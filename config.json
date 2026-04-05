@@ -1,0 +1,21 @@
+{
+  "images_folder": "images",
+  "audio_file": "audio/song.mp3",
+  "output_file": "output/final_reel.mp4",
+  "attach_audio": false,
+  "total_duration": 30.0,
+  "transition": {
+    "enabled": true,
+    "duration": 0.5,
+    "type": "fade"
+  },
+  "hooks": [
+    "Close your eyes and pray",
+    "Govinda is with you",
+    "Your blessings are coming"
+  ],
+  "effects": {
+    "zoom_enabled": true,
+    "zoom_scale": 0.05
+  }
+}
