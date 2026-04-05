@@ -1,21 +1,37 @@
 {
   "images_folder": "images",
   "audio_file": "audio/song.mp3",
-  "output_file": "output/final_reel.mp4",
-  "attach_audio": false,
+  "output_file": "output/final_reel_with_audio.mp4",
+  "attach_audio": true,
   "total_duration": 30.0,
+
+  "download": {
+    "enabled": true,
+    "gods": ["shiva", "vishnu", "ganesha"],
+    "images_per_god": 20,
+    "source": "wikimedia"
+  },
+
   "transition": {
     "enabled": true,
     "duration": 0.5,
     "type": "fade"
   },
+
   "hooks": [
     "Close your eyes and pray",
     "Govinda is with you",
     "Your blessings are coming"
   ],
+
   "effects": {
     "zoom_enabled": true,
     "zoom_scale": 0.05
+  },
+
+  "api_keys": {
+    "pexels_api_key": "",
+    "unsplash_access_key": "",
+    "pixabay_api_key": ""
   }
 }
