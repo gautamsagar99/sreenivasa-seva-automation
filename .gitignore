@@ -1,3 +1,7 @@
 venv
 scripts/__pycache__/
 scripts/.claude
+.env
+*.env
+images/
+output/

@@ -4,34 +4,58 @@
   "output_file": "output/final_reel_with_audio.mp4",
   "attach_audio": true,
   "total_duration": 30.0,
-
+  "ai_generation": {
+    "enabled": false,
+    "models": {
+      "flux_schnell": "black-forest-labs/FLUX.1-schnell",
+      "flux_dev": "black-forest-labs/FLUX.1-dev",
+      "sd35": "stabilityai/stable-diffusion-3.5-large"
+    },
+    "default_model": "flux_schnell",
+    "image_size": [
+      1024,
+      1024
+    ],
+    "num_inference_steps": 20,
+    "guidance_scale": 3.5,
+    "prompts": [
+      "Lord Shiva in deep meditation as Mahayogi, serene yet intense expression, matted locks cascading down, Third Eye aflame, trident at rest beside him, traditional Warli painting style with earthy tones, golden hour light filtering through temple windows, hallowed sanctum background, intricate tattoos adorning his body, detailed texture of stone walls, highly detailed, intricate, masterpiece, best quality, 8K",
+      "Lord Shiva in meditative Tandava pose, radiant golden aura emanating from his third eye, serene expression on his ivory face, long tresses adorned with sacred ash and floral garlands, white loincloth draped over his strong physique, traditional Warli art style, dramatic chiaroscuro lighting accentuating his muscular form, temple setting with the Ganga river flowing in the background, highly detailed, intricate, masterpiece, best quality, 8K",
+      "Lord Shiva in deep contemplation, seated on a lotus flower with serene expression and tranquil third eye aglow, Warli tribal art style, golden hour sunlight filtering through temple pillars, draped in silken ascetic attire with cobra ornaments, somber forest environment, highly detailed, intricate, masterpiece, best quality, 4K\"\n\nIn this prompt, I have changed the lighting setup to a golden hour that filters through temple pillars, creating a softer and more serene atmosphere compared to the volumetric god rays in the previous example. The style has been updated to Warli tribal art, giving a unique and distinctive aesthetic.",
+      "Lord Shiva in the serene deep meditation posture of Yogirajasana, eyes half-closed with a tranquil expression, ivory-hued ash smeared body and three faces adorned with serpents, crescent moon on forehead, Rudraksha beads around wrists, draped in tiger skin loincloth against a backdrop of an ancient Himalayan temple, chiaroscuro lighting casting dramatic shadows, golden hour sun setting behind the peaks, highly detailed, intricate, masterpiece, best quality, ultra HD, 4K",
+      "Lord Shiva in meditative deep-penance posture, long flowing matted hair adorned with serpents and sacred River Ganga, third eye blazing, trident resting calmly by his side, traditional Warli tribal art style with geometric patterns, dramatic chiaroscuro lighting enhancing the divine aura, cave environment amidst towering mountains, highly detailed, intricate, masterpiece, best quality, 8K"
+    ]
+  },
   "download": {
     "enabled": true,
-    "gods": ["shiva", "vishnu", "ganesha"],
+    "gods": [
+      "shiva"
+    ],
     "images_per_god": 20,
     "source": "wikimedia"
   },
-
   "transition": {
     "enabled": true,
     "duration": 0.5,
     "type": "fade"
   },
-
   "hooks": [
     "Close your eyes and pray",
     "Govinda is with you",
     "Your blessings are coming"
   ],
-
   "effects": {
     "zoom_enabled": true,
     "zoom_scale": 0.05
   },
-
-  "api_keys": {
-    "pexels_api_key": "",
-    "unsplash_access_key": "",
-    "pixabay_api_key": ""
+  "prompt_generation": {
+    "count": 5,
+    "subjects": [
+      "shiva"
+    ],
+    "model": "mistral:7b-instruct",
+    "temperature": 0.85,
+    "used_model": "mistral:7b-instruct",
+    "generated_at": "2026-04-05 17:41:10"
   }
 }
