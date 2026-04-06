@@ -57,5 +57,71 @@
     "temperature": 0.85,
     "used_model": "mistral:7b-instruct",
     "generated_at": "2026-04-05 17:41:10"
+  },
+  "youtube": {
+    "enabled": true,
+    "credentials_file": "client_secrets.json",
+    "upload_schedule": null,
+    "metadata_source": "hooks",
+    "title_prefix": "Lord Shiva - ",
+    "description_template": "Devotional video featuring Lord Shiva. {hook}",
+    "tags": [
+      "shiva",
+      "meditation",
+      "devotional",
+      "hindu",
+      "spiritual",
+      "yoga",
+      "om",
+      "mahadev"
+    ],
+    "category": "22",
+    "privacy_status": "private",
+    "playlist_id": null,
+    "hooks_rotation": {
+      "generated_at": "2026-04-05 21:40:37",
+      "total_hooks": 30,
+      "current_index": 0,
+      "hooks": [
+        "Embrace the essence of Shiva, reborn",
+        "Discover inner peace with Shiva's grace",
+        "Embark on a mystical journey with Shiva today",
+        "Momentum shift with Shiva's grace",
+        "Find peace amidst chaos with Shiva's grace",
+        "Discover Shiva's timeless wisdom",
+        "Blessings from Shiva for a",
+        "Journey to enlightenment with Lord Shiva",
+        "Unleash peace in your life: Shiva meditation",
+        "Embrace divine peace today with Shiva's wisdom",
+        "Awaken your inner Shiva today",
+        "Tap into the power of Shiva's grace",
+        "Discover Shiva's timeless wisdom now",
+        "Experience a new level of spiritual connection.",
+        "Journey into the depth of Shiva's grace",
+        "Shiva's mantras for a serene mind",
+        "Tap into cosmic energy: Shiva meditation",
+        "Discover the power within: Shiva's guidance",
+        "Embrace Shiva's boundless peace",
+        "Awaken your inner Shiva for a blessed day",
+        "Journey with Shiva for spiritual growth",
+        "Miraculous blessings revealed",
+        "Ignite your soul with Shiva's fire",
+        "Experience enlightenment in the modern world",
+        "Miracles unfold through devotion",
+        "Experience the divine spark within you",
+        "Peaceful moments with Shiva's guidance",
+        "Peaceful moments with Lord Shiva",
+        "Discover miracles in Shiva's universe",
+        "Journey through spiritual enlightenment with Shiva"
+      ]
+    },
+    "upload_history": [
+      {
+        "video_id": "JLsz1ruJ7D8",
+        "title": "Lord Shiva - Devotional Video - Lord Shiva Meditation",
+        "uploaded_at": "2026-04-05 21:27:17",
+        "file": "output\\final_reel_with_audio.mp4"
+      }
+    ]
   }
 }

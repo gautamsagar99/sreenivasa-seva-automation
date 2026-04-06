@@ -5,3 +5,6 @@ scripts/.claude
 *.env
 images/
 output/
+client_secrets.json
+token.json
+*.tmp
